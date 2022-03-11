@@ -116,11 +116,11 @@ function App() {
 
         <ProtectedRoute exact path="/orders" component={MyOrders} />
 
-        <Switch>
-          <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
+        
+        <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
           
-          <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
-        </Switch>
+        <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
+    
 
         <ProtectedRoute
           isAdmin={true}
