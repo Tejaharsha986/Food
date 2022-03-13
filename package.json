@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "heroku-postbulid":"NPM_CONFIG_PRODUCTION=flase && npm install --prefix frontend && npm run bulid --prefix frontend"
+    "heroku-postbulid": "NPM_CONFIG_PRODUCTION=flase && npm install --prefix frontend && npm run build --prefix frontend"
   },
   
   "author": "Teja",
