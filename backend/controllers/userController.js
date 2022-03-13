@@ -89,7 +89,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   try {
     await sendEmail({
       email: user.email,
-      subject: `Food Password Recovery`,
+      subject: `Ecommerce Password Recovery`,
       message,
     });
 
@@ -107,9 +107,9 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
   }
 });
 
-// Reset Password for the user account
+// Reset Password
 exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
-  // creating token hash for resetting thre password.
+  // creating token hash
   const resetPasswordToken = crypto
     .createHash("sha256")
     .update(req.params.token)
@@ -142,7 +142,7 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
   sendToken(user, 200, res);
 });
 
-// Get User Details
+// Get User Detail
 exports.getUserDetails = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findById(req.user.id);
 
