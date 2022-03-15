@@ -116,32 +116,29 @@ function App() {
 
         <ProtectedRoute exact path="/orders" component={MyOrders} />
 
-        
         <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
-          
-        <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
-    
 
-        <ProtectedRoute
+        <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
+
+        <Route
           isAdmin={true}
           exact
-          path="/admin/dashboard"
-          component={Dashboard}
+          path="/admin/dashboard" component={Dashboard}
         />
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/products"
           isAdmin={true}
           component={ProductList}
         />
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/product"
           isAdmin={true}
           component={NewProduct}
         />
 
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/product/:id"
           isAdmin={true}
@@ -160,7 +157,7 @@ function App() {
           isAdmin={true}
           component={ProcessOrder}
         />
-        <ProtectedRoute
+        <Route
           exact
           path="/admin/users"
           isAdmin={true}
