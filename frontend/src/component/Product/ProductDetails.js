@@ -105,7 +105,7 @@ const ProductDetails = ({ match }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title={`${product.name} -- Food App`} />
+          <MetaData title={`${product.name} -- FoodApp`} />
           <div className="ProductDetails">
             <div>
               <Carousel>
@@ -152,7 +152,7 @@ const ProductDetails = ({ match }) => {
                 <p>
                   Status:
                   <b className={product.Stock < 1 ? "redColor" : "greenColor"}>
-                    {product.Stock < 1 ? "unavaliable" : "avaliable"}
+                    {product.Stock < 1 ? "OutOfStock" : "InStock"}
                   </b>
                 </p>
               </div>

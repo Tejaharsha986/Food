@@ -5,7 +5,7 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import InstagramIcon from "@material-ui/icons/Instagram";
 const About = () => {
   const visitInstagram = () => {
-    window.location = "https://instagram.com/meabhisingh";
+    window.location = "https://www.instagram.com/teja_chowdary_makkena/";
   };
   return (
     <div className="aboutSection">
@@ -18,7 +18,7 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src=""
+              src="https://res.cloudinary.com/food-app-teja/image/upload/v1647413501/avatars/nojifmvtaxxo1ucmlrob.jpg"
               alt="Founder"
             />
             <Typography>Sri Teja</Typography>

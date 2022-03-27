@@ -13,10 +13,10 @@ import MetaData from "../layout/MetaData";
 const categories = [
   "TiffinItems",
   "RiceItems",
-  "Bevarges",
+  "Beverages",
   "HotDrinks",
-  "WaterBottle",
   "SnackItems",
+  "WaterBottles",
   "FastFoods",
 ];
 
@@ -26,7 +26,7 @@ const Products = ({ match }) => {
   const alert = useAlert();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 1000]);
+  const [price, setPrice] = useState([0, 4000]);
   const [category, setCategory] = useState("");
 
   const [ratings, setRatings] = useState(0);
@@ -66,7 +66,7 @@ const Products = ({ match }) => {
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="PRODUCTS -- Food App" />
+          <MetaData title="PRODUCTS -- FoodApp" />
           <h2 className="productsHeading">Products</h2>
 
           <div className="products">
@@ -84,7 +84,7 @@ const Products = ({ match }) => {
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={0}
-              max={1000}
+              max={4000}
             />
 
             <Typography>Categories</Typography>
